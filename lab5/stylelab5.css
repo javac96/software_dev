@@ -213,3 +213,43 @@ img{width: 100%; display: block;}
     width: 100%;
     padding: 5px;
 }
+.content_flex{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    background-color: lightblue;
+}
+.article_card{
+    width: 350px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 2px 2px 5px black;
+    transition: ease-in-out 400ms;
+    margin:30px;
+}
+.article_card:hover{
+    transform: scale(0.8);
+    box-shadow: 2px 2px 5px green;
+}
+.card_lnk{
+    text-align: center;
+    display: inline-block;
+    color: rgb(30, 0, 255);
+    font-size: 20px;
+    padding:1em;
+    
+}
+.card_lnk:hover{
+    color:crimson;
+}
+.footer_lab5{
+    background-color: rgb(32, 10, 119);
+    grid-area: footer;
+    text-align: center;
+}
+.footertext{
+    color:coral;
+    font-size: 20px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    
+}
