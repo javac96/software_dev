@@ -1,0 +1,20 @@
+
+:root{
+    --primarycolor:rgba(15, 20, 50, 0.815);
+    --primarylightcolor:rgb(97, 103, 107);
+    --secondarycolor: rgba(161, 161, 152);
+}
+.titlebg{
+    background-color: var(--primarycolor) !important;
+    color: var(--secondarycolor);
+    text-align: left;
+}
+.flexheader{
+    display: flex;
+   
+
+}
+.topitems{
+    display: flex;
+    float: right;
+}
