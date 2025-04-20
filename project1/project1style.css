@@ -1,20 +1,139 @@
 
 :root{
-    --primarycolor:rgba(15, 20, 50, 0.815);
-    --primarylightcolor:rgb(97, 103, 107);
+    --primarycolor:rgba(28, 16, 202, 0.815);
+    --primarylightcolor:rgb(202, 167, 221);
     --secondarycolor: rgba(161, 161, 152);
 }
-.titlebg{
-    background-color: var(--primarycolor) !important;
-    color: var(--secondarycolor);
-    text-align: left;
+.container {
+    max-width: 1200px;
+    padding: 1px 20px;
 }
-.flexheader{
-    display: flex;
-   
 
+/* Navigation Styles */
+header {
+    background-color: var(--primarycolor) !important;
+    position: sticky;
+    box-shadow: 0 2px 5px rgba(34, 37, 37, 0.5);
 }
-.topitems{
+
+nav {
     display: flex;
-    float: right;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
 }
+.logo{
+    width:50px;
+    height:50px;
+}
+
+.introtext {
+    font-size: 25px;
+    font-weight: bold;
+    color: #fff;
+}
+.nav-links {
+    display: flex;
+    list-style: none;
+}
+
+.nav-links li {
+    margin-left: 30px;
+}
+
+.nav-links a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #3498db;
+}
+
+/* Dropdown */
+.dropdown {
+    display: inline-block;
+    position: relative;
+  }
+
+ /* Hero Section */
+ .hero-section {
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.5), rgba(79, 72, 72, 1)), url("images/hero_image.jpg");
+    background-position: center;
+    background-size: cover;
+    margin: 1px;
+    width: 100%;
+  }
+  .hero-content{
+    text-align: center;
+    padding:60px;
+  }
+  
+  /* Main section */
+  .mainsection{
+    width: 100%;
+  }
+  .bodytext{
+    background-color: pink;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: 50;
+    margin: 3px;
+    padding: 5px;
+    color: rgb(100, 100, 146);
+  }
+  .content_flex{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    background-color: lightblue;
+}
+.maincard{
+    width: 50%;
+    height: 100%;
+    border-radius: 10px;
+    padding: 5px;
+    box-shadow: 2px 2px 5px black;
+    margin:30px;
+}
+.maincard:hover{
+    transform: scale(0.8);
+    box-shadow: 2px 2px 5px green;
+}
+.main_card1{
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.5), rgba(79, 72, 72, 1)), url("images/lifestyle_changes.jpg");
+}
+.main_card2{
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.5), rgba(79, 72, 72, 1)), url("images/coping_straties.jpg");
+}
+.main_card3{
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.5), rgba(79, 72, 72, 1)), url("images/professional_help.jpg");
+}
+.card_link{
+    display: inline-block;
+    color: rgb(30, 0, 255);
+    font-size:20px;
+    padding:1em;
+    text-align: center;
+    
+}
+.card_link:hover{
+    color: greenyellow;
+}
+
+  /* Footer secton */
+  .footercard{
+    background-color: aqua;
+  }
+
+  .footercard{
+    background-color: rgb(100, 100, 146);
+  }
+  .footercontent{
+    text-align: center;
+  }
+  .gmap{
+    text-align: left;
+  }
+  

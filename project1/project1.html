@@ -8,17 +8,66 @@
     <link rel="stylesheet" href="project1style.css">
 </head>
   <body>
-    <section class="flexheader">
-      <h1 class="bg-warning titlebg">test text mental health</h1>
-      <ul class="topitems">
-        <li><a href="#">Home</a></li>
-        <li><a href="">Services</a></li>
-        <li><a href="">Membership</a></li>
-        <li><a href="">Contact</a></li>
-      </ul>
-    </section>
-
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous"></script>
+     <!-- Header and Navigation -->
+     <header>
+      <div class="container">
+          <nav>
+            <div><img class="logo" src="images/logo.jpg" alt=""></div>
+              <h1 class="introtext">Manage your mental health</h1>
+              <ul class="nav-links">
+                  <li><a href="#">Home</a></li>
+                  <li><a href="#ddlist">Services</a></li>
+                  <li><a href="#">Membership</a></li>
+                  <li><a href="#footeritem">Contact</a></li>
+              </ul>
+          </nav>
+      </div>
+      
+  </header>
+  
+  <!-- Hero Section -->
+  <section class="hero-section">
+    <div class="hero-content">
+      <h1 style="font-size:30px; color: chocolate;">Having mental illness? You're not alone!</h1>
+      <h3>We're here to help you</h3>
+      <a href="learnMore.html">Learn More</a>
+    </div>
+  </section>
+  <hr>
+  <!--  Main section -->
+  <main class="mainsection">
+    <p class="bodytext">Mental illness, also known as mental health disorders, refers to a wide range of conditions that affect mood, thinking, and behavior. Examples of mental illness include depression, anxiety disorders, schizophrenia, eating disorders, and addictive behaviors.</p>
+    <section class="content_flex">
+      <div class="maincard main_card1">
+          <a class="card_link" href="" target="_blank" rel="noopener noreferrer">Lifestyle adjustments</a>
+      </div>
+      <div class="maincard main_card2"> 
+          <a class="card_link" href="" target="_blank" rel="noopener noreferrer">Coping strategies</a>
+      </div>
+      <div class="maincard main_card3">
+          <a class="card_link" href="" target="_blank" rel="noopener noreferrer">Professional help</a>
+      </div>
+  </section>
+  </main>
+  <!-- Dropdown for Services Menu -->
+  <div class="dropdown">
+    <div id="ddlist" class="dropdown-options">
+      <a href="#">Lifestyle adjustments</a>
+      <a href="#">Coping strategies</a>
+      <a href="#">Professional help</a>
+    </div>
+   </div>
+  <!-- Footer section -->
   </body>
+  
+  <footer class="footercard">
+    <div id="footeritem" class="footercontent">
+      <p>112 Main st. City, State 0000</p>
+      <p>Phone: 347-000-0000</p>
+      <p>Email: test@gmail.com</p>
+      <div class="gmap">
+        <a href="">Google Map</a>
+      </div>
+    </div>
+  </footer>
 </html>
