@@ -1,6 +1,7 @@
 """ Robiul Hasan
 April 20, Introduction Python"""
 ' Robiul Hasan\nApril 20, Introduction Python'
+"""
 #Single comment. This line WILL NOT run
 print('\n---------Example 1: String characters---------------')
 print("\tGood morning! \nThis is my first \"Python\" code!")
@@ -110,8 +111,22 @@ print(f"slice from the 3rd to the 8th chars= {username[2:8]}")
 
 print(f"slice from the 4rth to the 6th chars using negative index= {username[-8:-5]}")
 
+
+
 print('\n---------Example : 12 total chars in a string is len method-----------')
 print(f"username has ={len(username)} characters")
+"""
+print('\n---------Example : 13 Strin() method-----------')
+username="        peterpan123     "
+print(f"The username= {username}. End od username")    
+username=username.strip() 
+print(f"The whitespace removed username= {username}. End od username")
+username=username.upper() 
+print(f"The uppercase username= {username}. End od username")
+username=username.lower() 
+print(f"The lowercase username= {username}. End od username")
+username=(username).upper().replace('p', '%') 
+print(f"The repalced u in  username= {username}. End od username")
 
 
 
