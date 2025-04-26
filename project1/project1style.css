@@ -2,75 +2,57 @@
 :root{
     --primarycolor:rgba(28, 16, 202, 0.815);
     --primarylightcolor:rgb(202, 167, 221);
-    --secondarycolor: rgba(161, 161, 152);
+    --secondarycolor: rgba(8, 53, 43, 0.763);
 }
+
+
 .container {
-    max-width: 1200px;
-    padding: 1px 20px;
+  max-width: 100%;
+  padding: 10px 10px;  
 }
 
 /* Navigation Styles */
 header {
-    background-color: var(--primarycolor) !important;
-    position: sticky;
-    box-shadow: 0 2px 5px rgba(34, 37, 37, 0.5);
+  background-color: var(--primarycolor) !important;
+  box-shadow: 0 2px 5px rgba(34, 37, 37, 0.5);
+  position: sticky;
 }
 
 nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0;
 }
 .logo{
-    width:50px;
-    height:50px;
+  width:50px;
+  height:50px;
 }
 
 .introtext {
-    font-size: 25px;
-    font-weight: bold;
-    color: #fff;
+  font-size: 25px;
+  font-weight: bold;
+  color: #fff;
 }
 .nav-links {
-    display: flex;
-    list-style: none;
+  display: flex;
+  list-style: none;
 }
 
 .nav-links li {
-    margin-left: 30px;
+  margin-left: 30px;
 }
 
 .nav-links a {
-    color: #fff;
-    text-decoration: none;
-    font-weight: 500;
-    transition: color 0.3s ease;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
 }
 
 .nav-links a:hover {
-    color: #3498db;
+  color: #3498db;
 }
-
-/* Dropdown */
-.dropdown {
-    display: inline-block;
-    position: relative;
-  }
-
- /* Hero Section */
- .hero-section {
-    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.5), rgba(79, 72, 72, 1)), url("images/hero_image.jpg");
-    background-position: center;
-    background-size: cover;
-    margin: 1px;
-    width: 100%;
-  }
-  .hero-content{
-    text-align: center;
-    padding:60px;
-  }
-  
   /* Main section */
   .mainsection{
     width: 100%;
@@ -83,57 +65,210 @@ nav {
     padding: 5px;
     color: rgb(100, 100, 146);
   }
-  .content_flex{
-    display: flex;
-    justify-content: space-between;
-    padding: 10px;
-    background-color: lightblue;
-}
-.maincard{
-    width: 50%;
-    height: 100%;
-    border-radius: 10px;
-    padding: 5px;
-    box-shadow: 2px 2px 5px black;
-    margin:30px;
-}
-.maincard:hover{
-    transform: scale(0.8);
-    box-shadow: 2px 2px 5px green;
-}
+ 
 .main_card1{
-    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.5), rgba(79, 72, 72, 1)), url("images/lifestyle_changes.jpg");
+    background-image: linear-gradient( rgba(0, 0, 0, 0.5), rgba(79, 72, 72, 1)), url("images/lifestyle_changes.jpg");
 }
 .main_card2{
-    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.5), rgba(79, 72, 72, 1)), url("images/coping_straties.jpg");
+    background-image: linear-gradient( rgba(0, 0, 0, 0.5), rgba(79, 72, 72, 1)), url("images/test2.jpg");
 }
 .main_card3{
-    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.5), rgba(79, 72, 72, 1)), url("images/professional_help.jpg");
+    background-image: linear-gradient( rgba(0, 0, 0, 0.5), rgba(79, 72, 72, 1)), url("images/professional_help.jpg");
 }
 .card_link{
     display: inline-block;
     color: rgb(30, 0, 255);
     font-size:20px;
-    padding:1em;
-    text-align: center;
-    
+    padding:1em;   
 }
 .card_link:hover{
     color: greenyellow;
 }
 
-  /* Footer secton */
-  .footercard{
-    background-color: aqua;
-  }
+ /* Carousel Custom Styling */
+ .carouitem{
+  height: 450px;
+ }
+ .carouimage{
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(0.6);
+ }
+ .linkbtn:hover{
+   color: chartreuse;
+ }
 
-  .footercard{
-    background-color: rgb(100, 100, 146);
+/* Responsive adjustments */
+@media only screen and (max-width: 600px) {
+  body {
+    background-color: lightyellow;
   }
-  .footercontent{
-    text-align: center;
+}
+
+@media (max-width: 768px) {
+  .carousel-item {
+      height: 350px;
   }
-  .gmap{
-    text-align: left;
+  
+  .quote-1, .quote-2, .quote-3 {
+      font-size: 1.3rem;
   }
+  
+  .carousel-caption {
+      padding: 20px 30px;
+  }
+}
+
+@media (max-width: 576px) {
+  .carousel-item {
+      height: 400px;
+  }
+  
+  .quote-1, .quote-2, .quote-3 {
+      font-size: 1.1rem;
+  }
+  
+  .carousel-caption {
+      padding: 20px;
+  }
+}
+
+/* Inspirational Card Styles */
+.inspiration-card {
+  height: 100%;
+  border: none;
+  border-radius: 10px;
+  box-shadow: 5px 5px 15px rgba(22, 21, 21, 0.664);
+  transition: all 0.3s ease;
+  overflow: hidden;
+  background-color: lightskyblue;
+  
+}
+
+.inspiration-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px green;
+}
+
+.inspiration-card .card-title {
+  color: var(--primary-color);
+  font-weight: 600;
+}
+
+.inspiration-card .card-text {
+  font-style: italic;
+  color: #555;
+}
+
+.btn-outline-primary {
+  border-color: var(--primary-color);
+  color: var(--primary-color);
+}
+
+.btn-outline-primary:hover {
+  background-color: var(--primary-color);
+  color: white;
+}
+  /* Footer secton */
+  .social-icons {
+    display: flex;
+    gap: 15px;
+}
+.footerpart{
+  background-color: rgba(171, 196, 198, 0.297)
+}
+
+.social-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.1);
+    transition: all 0.3s ease;
+}
+
+.social-icon:hover {
+    background-color: var(--primary-color);
+    transform: translateY(-5px);
+}
+
+
+
+/* --- Learn More page --- */
+.article-header {
+  background-color: rgb(116, 166, 186);
+  color: white;
+  padding: 60px 0;
+  margin-bottom: 40px;
+}
+
+.article-section {
+  width: 100%;
+  background-color: cadetblue;
+}
+
+.article-section h3 {
+  color: var(--primary-color);
+ 
+}
+
+.article-img {
+  border-radius: 10px;
+  margin: 20px 0;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.resources-card {
+  height: 100%;
+  border: none;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+  transition: all 0.3s ease;
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+
+.resources-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+}
+
+
+/* ---Sing up page--- */
+.signup-container {
+  max-width: 550px;
+  margin: 50px auto;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 10px 30px rgba(50, 78, 8, 0.5);
+  background-color: var(--light-color);
+}
+
+.signup-header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.signup-header i {
+  font-size: 3rem;
+  color: var(--primary-color);
+  margin-bottom: 15px;
+  display: block;
+}
+
+.form-control {
+  height: 50px;
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+
+.btn-signup {
+  height: 50px;
+  font-weight: 600;
+  border-radius: 5px;
+  background-color: var(--primary-color);
+  border-color: var(--primary-color);
+}
   

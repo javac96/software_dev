@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up - Manage Your Mental Health</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="project1style.css">
+    <!-- Font Awesome for social media icons -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <!-- Navigation Bar -->
+        <div class="container">
+            <nav>
+              <div><img class="logo" src="images/logo.jpg" alt=""></div>
+                <h2 class="introtext">Manage your mental health</h2>
+            </nav>
+        </div>
+     </header>
+  
+      <!-- Back button -->
+    <div>
+        <button type="button" class="float-left text-muted"><a href="project1.html">Back</a></button>
+     </div>
+    <!-- Sign Up Form -->
+    <div class="container">
+        <div class="signup-container bg-info">
+            <div class="signup-header">
+                <h2>Sign up</h2>
+                <p>Join with us for mental health support</p>
+            </div>
+            
+            <form>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="mb-3">
+                            <label for="firstName" class="form-label">First Name</label>
+                            <input type="text" class="form-control" id="firstName" required>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="mb-3">
+                            <label for="lastName" class="form-label">Last Name</label>
+                            <input type="text" class="form-control" id="lastName" required>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="mb-3">
+                    <label for="email" class="form-label">Email Address</label>
+                    <input type="email" class="form-control" id="email" required>
+                </div>
+                
+                <div class="mb-3">
+                    <label for="password" class="form-label">Password</label>
+                    <input type="password" class="form-control" id="password" required>
+                </div>
+                
+                <div class="mb-3">
+                    <label for="confirmPassword" class="form-label">Confirm Password</label>
+                    <input type="password" class="form-control" id="confirmPassword" required>
+                </div>
+                
+                <div class="mb-3 form-check">
+                    <input type="checkbox" class="form-check-input" id="termsCheck" required>
+                    <label class="form-check-label" for="termsCheck">I agree to the Terms of Service and Privacy Policy</label>
+                </div>
+                
+                <button type="submit" class="btn btn-primary btn-signup show w-100">Create Account</button>
+            </form>
+            
+        
+        </div>
+    </div>
+
+</body>
+<!-- Learn more footer -->
+<footer class="bg-light pt-4 pb-2 h-50 footerpart" id="contact">
+    <div class="container">
+        <div class="row">
+            <!-- Contact Information -->
+            <div class="col-md-4 mb-4">
+                <h5 class="text-muted">Contact Us</h5>
+                <address>
+                    <p><i class="fas fa-map-marker-alt"></i> 123 Main St<br>Good City, KT 12345</p>
+                    <p><i class="fas fa-phone"></i> <a href="tel:+1234567890">(123) 456-7890</a></p>
+                    <p><i class="fas fa-envelope"></i> <a href="mailto:info@manageyourmentalhealth.com">info@manageyourmentalhealth.com</a></p>
+                </address>
+            </div>
+            
+            <!-- Quick Links -->
+            <div class="col-md-4 mb-4">
+                <h5 class="text-muted">Quick Links</h5>
+                <ul class="list-unstyled">
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="faq.html">FAQs</a></li>
+                </ul>
+            </div>
+            
+            <!-- Social Media -->
+            <div class="col-md-4 mb-4">
+                <h5 class="text-muted">Connect with us</h5>
+                <div class="social-icons">
+                    <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-youtube"></i></a>
+                </div>
+                <div class="mt-3">
+                    <p class="text-muted">Follow us in social media for the articles and update.</p>
+                </div>
+            </div>
+        </div>
+        
+        <hr class="mt-4 mb-3">
+        
+        <!-- Copyright -->
+        <div class="row">
+            <div class="col-12 text-center">
+                <p class="mb-0 text-muted">&copy; 2025 Manage Your Mental Health. All rights reserved.</p>
+            </div>
+        </div>
+    </div>
+</footer>
+</html>

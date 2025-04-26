@@ -1,73 +1,328 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Manage your mental health</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
-    <link rel="stylesheet" href="project1style.css">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Manage your mental health</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+  <link rel="stylesheet" href="project1style.css">
+  <!-- Social media icon from font awesome -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
 </head>
-  <body>
-     <!-- Header and Navigation -->
-     <header>
-      <div class="container">
-          <nav>
-            <div><img class="logo" src="images/logo.jpg" alt=""></div>
-              <h1 class="introtext">Manage your mental health</h1>
-              <ul class="nav-links">
-                  <li><a href="#">Home</a></li>
-                  <li><a href="#ddlist">Services</a></li>
-                  <li><a href="#">Membership</a></li>
-                  <li><a href="#footeritem">Contact</a></li>
-              </ul>
-          </nav>
-      </div>
-      
+
+<body>
+  <!-- Header and Navigation -->
+  <header>
+    <div class="container">
+      <nav class="d-flex">
+        <div><img class="logo" src="images/logo.jpg" alt=""></div>
+        <h1 class="introtext fs-2">Manage your mental health</h1>
+        <ul class="nav-links">
+          <li><a href="#">Home</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="signup.html">Membership</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
   </header>
-  
-  <!-- Hero Section -->
-  <section class="hero-section">
-    <div class="hero-content">
-      <h1 style="font-size:30px; color: chocolate;">Having mental illness? You're not alone!</h1>
-      <h3>We're here to help you</h3>
-      <a href="learnMore.html">Learn More</a>
+
+
+     <!-- Mental Health Inspirational Carousel -->
+     <div id="hero-carousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#hero-carousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#hero-carousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#hero-carousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+      </div>
+      <div class="carousel-inner">
+        <div class="carousel-item active carouitem">
+          <img src="images/hero_image.jpg" class="d-block w-100 carouimage" alt="...">
+          <div class="carousel-caption top-0  mt-5 d-none d-md-block">
+            <h5 class="mt-t fs-3 text-danger">Having mental illness? You're not alone!</h5>
+            <p class="display-2 fw-bolder fs-1">We're here to help you</p>
+            <button class="btn btn-primary px-4 py-2 fs-5 mt-5"><a class="text-info linkbtn" href="learnMore.html">Learn More</a></button>
+          </div>
+        </div>
+        <div class="carousel-item carouitem">
+          <img src="images/test1.jpg" class="d-block w-100 carouimage" alt="...">
+          <div class="carousel-caption top-0  mt-5 d-none d-md-block">
+            <h5 class="mt-t fs-3 text-danger">Having mental illness? You're not alone!</h5>
+            <p class="display-2 fw-bolder fs-1">We're here to help you</p>
+            <button class="btn btn-primary px-4 py-2 fs-5 mt-5"><a class="text-info linkbtn" href="learnMore.html">Learn More</a></button>
+          </div>
+        </div>
+        <div class="carousel-item carouitem">
+          <img src="images/test2.jpg" class="d-block w-100 carouimage" alt="...">
+          <div class="carousel-caption top-0  mt-5 d-none d-md-block">
+            <h5 class="mt-t fs-3 text-danger">Having mental illness? You're not alone!</h5>
+            <p class="display-2 fw-bolder fs-1">We're here to help you</p>
+            <button class="btn btn-primary px-4 py-2 fs-5 mt-5"><a class="text-info linkbtn" href="learnMore.html">Learn More</a></button>
+          </div>
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#hero-carousel" data-bs-slide="prev" d>
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#hero-carousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
     </div>
-  </section>
-  <hr>
-  <!--  Main section -->
-  <main class="mainsection">
-    <p class="bodytext">Mental illness, also known as mental health disorders, refers to a wide range of conditions that affect mood, thinking, and behavior. Examples of mental illness include depression, anxiety disorders, schizophrenia, eating disorders, and addictive behaviors.</p>
-    <section class="content_flex">
-      <div class="maincard main_card1">
-          <a class="card_link" href="" target="_blank" rel="noopener noreferrer">Lifestyle adjustments</a>
+
+    <!-- Introductory section -->
+    <div class="container mt-4 px-4 article-section">
+      <div class="row">
+        <div class="col-12 text-center text-info">
+          <h1 class="main-heading">Taking Care of Your Mental Health</h1>
+          <p class="lead fs-5 font-awesome">Mental health is a crucial component of overall well-being. Explore our resources to help you
+            manage and improve your mental health.</p>
+        </div>
       </div>
-      <div class="maincard main_card2"> 
-          <a class="card_link" href="" target="_blank" rel="noopener noreferrer">Coping strategies</a>
+    </div> 
+
+    
+    <main class="container  mt-1">
+    <!-- Card section -->
+    <div id="services" class="container py-5">
+      <section id="services mt-2">
+        <h2 class="section-title text-info fs-1 fw-bold text-center bg-light">Our Services:</h2>
+        <div class="row g-4">
+          <div class="col-12 col-md-6 col-lg-4 main_card1">
+            <div class="service-card">
+              <a class="card_link text-center" href="#lifestyle">Lifestyle Adjustments</a>
+            </div>
+          </div>
+          <div class="col-12 col-md-6 col-lg-4 main_card2">
+            <div class="service-card">
+              <a class="card_link text-center" href="#coping">Coping Strategies</a>
+            </div>
+          </div>
+          <div class="col-12 col-md-6 col-lg-4 main_card3">
+            <div class="service-card">
+              <a class="card_link text-center" href="#professional">Professional Help</a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- Three Main Sections -->
+    <section class="mb-5">
+      <!-- Lifestyle Adjustments Section -->
+      <div id="lifestyle" class="service-section mt-2 bg-info">
+        <div class="row align-items-center">
+          <div class="col-md-6 order-md-2">
+            <img src="images/lifestyle_changes.jpg" alt="Lifestyle Adjustments"
+              class="img-fluid rounded shadow-lg hover-effect">
+          </div>
+          <div class="col-md-6 order-md-1">
+            <div class="content-box p-2">
+              <h2><i class="fas fa-heart text-primary"></i> Lifestyle Adjustments</h2>
+              <p>Small changes in your daily routine can significantly impact your mental well-being. Consider the
+                following adjustments:</p>
+              <ul class="custom-list">
+                <li><strong>Regular Exercise</strong> - Physical activity releases endorphins that improve mood and
+                  reduce stress.</li>
+                <li><strong>Balanced Diet</strong> - Nutrition plays a vital role in brain function and mood regulation.
+                </li>
+                <li><strong>Adequate Sleep</strong> - Quality sleep is essential for cognitive function and emotional
+                  regulation.</li>
+                <li><strong>Social Connections</strong> - Maintain meaningful relationships to combat loneliness and
+                  provide support.</li>
+              </ul>
+              <p>Implementing these changes gradually can lead to sustainable improvements in your mental health.</p>
+            </div>
+          </div>
+        </div>
       </div>
-      <div class="maincard main_card3">
-          <a class="card_link" href="" target="_blank" rel="noopener noreferrer">Professional help</a>
+
+      <!-- Coping Strategies Section -->
+      <div id="coping" class="service-section mt-2 bg-info">
+        <div class="row g-0 align-items-center">
+          <div class="col-md-6 order-md-2">
+            <img src="images/test3.jpg" alt="Coping Strategies"
+              class="img-fluid rounded shadow-lg hover-effect">
+          </div>
+          <div class="col-md-6 order-md-2">
+            <div class="content-box p-2">
+              <h2><i class="fas fa-hand-holding-heart text-primary"></i> Coping Strategies</h2>
+              <p>Developing healthy coping mechanisms can help you navigate stress and emotional challenges:</p>
+              <ol class="custom-ordered-list">
+                <li><strong>Mindfulness & Meditation</strong> - Practice being present to reduce anxiety about the past
+                  or future.</li>
+                <li><strong>Deep Breathing Exercises</strong> - Activate your parasympathetic nervous system to reduce
+                  stress.</li>
+                <li><strong>Journaling</strong> - Express your thoughts and feelings to gain clarity and perspective.
+                </li>
+                <li><strong>Creative Outlets</strong> - Engage in art, music, or other creative activities to process
+                  emotions.</li>
+              </ol>
+              <p>The key is to find strategies that work for you and incorporate them into your daily routine.</p>
+            </div>
+          </div>
+        </div>
       </div>
-  </section>
+
+      <!-- Professional Help Section -->
+      <div id="professional" class="service-section mt-2 bg-info">
+        <div class="row align-items-center">
+          <div class="col-md-6 order-md-2">
+            <img src="images/professional_help.jpg" alt="Professional Help"
+              class="img-fluid rounded shadow-lg hover-effect">
+          </div>
+          <div class="col-md-6 order-md-1">
+            <div class="content-box p-2">
+              <h2><i class="fas fa-user-md text-primary"></i> Professional Help</h2>
+              <p>Sometimes self-help strategies aren't enough. Seeking professional support is a sign of strength, not
+                weakness.</p>
+              <ul class="custom-list">
+                <li><strong>Therapy Options</strong> - Different approaches including Cognitive Behavioral Therapy
+                  (CBT), psychodynamic therapy, and more.</li>
+                <li><strong>Psychiatric Services</strong> - Medical doctors who can diagnose conditions and prescribe
+                  medications when needed.</li>
+                <li><strong>Support Groups</strong> - Connect with others facing similar challenges for mutual support
+                  and understanding.</li>
+                <li><strong>Crisis Resources</strong> - Immediate help for urgent mental health situations.</li>
+              </ul>
+              <p>Professional guidance can provide personalized strategies and support for your specific situation.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Inspirational Cards Section -->
+    <section id="inspiration" class="mb-5">
+      <h2 class="text-center text-danger mb-4">Inspirational Insights</h2>
+
+      <!-- First Row of Cards -->
+      <div class="row mb-4">
+        <div class="col-md-4 mb-4">
+          <div class="card inspiration-card">
+            <div class="card-body">
+              <h5 class="card-title">Self-Compassion</h5>
+              <p class="card-text">"Be kind to yourself. Remember that you are a work in progress, and healing isn't
+                linear."</p>
+              <a href="https://self-compassion.org/" target="_blank" class="float-end linkbtn">Read More >></a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 mb-4">
+          <div class="card inspiration-card">
+            <div class="card-body">
+              <h5 class="card-title">Mindful Living</h5>
+              <p class="card-text">"The present moment is the only time over which we have dominion. The most important
+                person is always the person you are with."</p>
+              <a href="https://www.mindful.org/" target="_blank" class="float-end linkbtn">Read More >></a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 mb-4">
+          <div class="card inspiration-card">
+            <div class="card-body">
+              <h5 class="card-title">Growth Mindset</h5>
+              <p class="card-text">"The challenges you face are opportunities for growth. Every setback contains the
+                seeds of advancement."</p>
+              <a href="https://www.mindsetworks.com/" target="_blank" class="float-end linkbtn">Read More >></a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Second Row of Cards -->
+      <div class="row">
+        <div class="col-md-4 mb-4">
+          <div class="card inspiration-card">
+            <div class="card-body">
+              <h5 class="card-title">Emotional Intelligence</h5>
+              <p class="card-text">"Understanding your emotions gives you the power to transform them rather than be
+                controlled by them."</p>
+              <a href="https://www.6seconds.org/" target="_blank" class="float-end linkbtn">Read More >></a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 mb-4">
+          <div class="card inspiration-card">
+            <div class="card-body">
+              <h5 class="card-title">Resilience Building</h5>
+              <p class="card-text">"Resilience isn't about bouncing back; it's about growing through challenges and
+                becoming stronger."</p>
+              <a href="https://www.apa.org/topics/resilience" target="_blank" class="float-end linkbtn">Read More >></a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 mb-4">
+          <div class="card inspiration-card">
+            <div class="card-body">
+              <h5 class="card-title">Connection & Community</h5>
+              <p class="card-text">"We heal better together. Human connection is a powerful medicine for the mind and
+                heart."</p>
+              <a href="https://www.nami.org/" target="_blank" class="float-end linkbtn">Read More >></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    </div>
+
   </main>
-  <!-- Dropdown for Services Menu -->
-  <div class="dropdown">
-    <div id="ddlist" class="dropdown-options">
-      <a href="#">Lifestyle adjustments</a>
-      <a href="#">Coping strategies</a>
-      <a href="#">Professional help</a>
-    </div>
-   </div>
+
+ 
   <!-- Footer section -->
-  </body>
-  
-  <footer class="footercard">
-    <div id="footeritem" class="footercontent">
-      <p>112 Main st. City, State 0000</p>
-      <p>Phone: 347-000-0000</p>
-      <p>Email: test@gmail.com</p>
-      <div class="gmap">
-        <a href="">Google Map</a>
+</body>
+<hr>
+<!-- Footer -->
+<footer class="pt-4 pb-2 h-50 footerpart" id="contact">
+  <div class="container">
+    <div class="row">
+      <!-- Contact Information -->
+      <div class="col-md-4 mb-4">
+        <h5 class="text-muted">Contact Us</h5>
+        <address>
+          <p><i class="fas fa-map-marker-alt"></i> 123 Main St<br>Good City, KT 12345</p>
+          <p><i class="fas fa-phone"></i> <a href="tel:+1234567890">(123) 456-7890</a></p>
+          <p><i class="fas fa-envelope"></i> <a
+              href="mailto:info@manageyourmentalhealth.com">info@manageyourmentalhealth.com</a></p>
+        </address>
+      </div>
+
+      <!-- Quick Links -->
+      <div class="col-md-4 mb-4">
+        <h5 class="text-muted">For more Info</h5>
+        <ul class="list-unstyled">
+          <li><a href="learnMore.html">FAQ</a></li>
+          <li><a href="">About Us</a></li>
+          
+        </ul>
+      </div>
+
+      <!-- Social Media -->
+      <div class="col-md-4 mb-4">
+        <h5 class="text-muted">Connect with us</h5>
+        <div class="social-icons">
+          <a href="https://www.facebook.com/" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+          <a href="https://x.com/" class="social-icon"><i class="fab fa-twitter"></i></a>
+          <a href="https://youtube.com/" class="social-icon"><i class="fab fa-youtube"></i></a>
+        </div>
+        <div class="mt-3">
+          <p class="text-muted">Follow us in social media for the articles and update.</p>
+        </div>
       </div>
     </div>
-  </footer>
+
+    <hr class="mt-4 mb-3">
+
+    <!-- Copyright -->
+    <div class="row">
+      <div class="col-12 text-center">
+        <p class="mb-0 text-muted">&copy; 2025 Manage Your Mental Health. All rights reserved.</p>
+      </div>
+    </div>
+  </div>
+</footer>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous"></script>
 </html>
