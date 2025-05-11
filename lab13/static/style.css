@@ -1,0 +1,13 @@
+img{width: 100%; display: block;}
+.title{
+    text-align:center; color:brown
+}
+.introimgcontainer{
+    width: 700px;
+    margin: 2em auto;
+}
+.maincontainer{
+    padding: 2rem;
+    border: solid grey 2px;
+    background-color: aquamarine;
+}
