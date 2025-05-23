@@ -15,17 +15,17 @@ from flask_sqlalchemy import SQLAlchemy
 app = Flask(__name__)
 
 # connecting to Postrgresql
-app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://postgres:Takia0928@localhost/demoDB'
+app.config['ng_DATABASE_URI'] = 'postgresql://postgres:Takia0928@localhost/demoDB'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
 # create a database object db
 db=SQLAlchemy(app)
 
-#create a secret key to handle data withing our server
+#create a secret key to handle data within our server
 import os
 app.config['SECRET_KEY'] = os.urandom(24)
 
-#define a model (create table in teh 'demoDB' databse)
+#define a model (create table in the 'demoDB' databse)
 class UserLogin(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     username = db.Column(db.String(80), nullable = False)
