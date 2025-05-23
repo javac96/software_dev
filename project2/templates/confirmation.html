@@ -1,0 +1,81 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container my-5">
+    <div class="row justify-content-center">
+        <div class="col-lg-8">
+            <div class="card border-success">
+                <div class="card-header bg-success text-white">
+                    <h3 class="mb-0">Order Confirmation</h3>
+                </div>
+                <div class="card-body">
+                    <div class="alert alert-success">
+                        <h4 class="alert-heading">Thank you for shopping with us!</h4>
+                        <p>Your order #{{ order.order_id }} has been placed successfully.</p>
+                    </div>
+                    
+                    <div class="row mb-4">
+                        <div class="col-md-6">
+                            <h5>Order Details</h5>
+                            <p><strong>Order Date:</strong> {{ order.order_dt.strftime('%B %d, %Y %I:%M %p') }}</p>
+                            <p><strong>Total Amount:</strong> ${{ "%.2f"|format(order.ttl_amt) }}</p>
+                            <p><strong>Status:</strong> <span class="badge bg-primary">{{ order.status|title }}</span></p>
+                            {% if order.pmt_mthd_id %}
+                            <p><strong>Payment Method:</strong> {{ order.payment_method.description }}</p>
+                            {% endif %}
+                        </div>
+                        <div class="col-md-6">
+                            <h5>Shipping Information</h5>
+                            <address>{{ order.shipping_address }}</address>
+                        </div>
+                    </div>
+                    
+                    <h5 class="mb-3">Order Items</h5>
+                    <div class="table-responsive">
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th>Book</th>
+                                    <th>Price</th>
+                                    <th>Quantity</th>
+                                    <th>Total</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {% for item in order.items %}
+                                <tr>
+                                    <td>{{ item.book.book_title }}</td>
+                                    <td>${{ "%.2f"|format(item.price_at_purchase) }}</td>
+                                    <td>{{ item.quantity }}</td>
+                                    <td>${{ "%.2f"|format(item.price_at_purchase * item.quantity) }}</td>
+                                </tr>
+                                {% endfor %}
+                            </tbody>
+                            <tfoot>
+                                <tr class="fw-bold">
+                                    <td colspan="3" class="text-end">Subtotal:</td>
+                                    <td>${{ "%.2f"|format(order.ttl_amt) }}</td>
+                                </tr>
+                                <tr>
+                                    <td colspan="3" class="text-end">Shipping:</td>
+                                    <td>Free</td>
+                                </tr>
+                                <tr class="fw-bold fs-5">
+                                    <td colspan="3" class="text-end">Total:</td>
+                                    <td>${{ "%.2f"|format(order.ttl_amt) }}</td>
+                                </tr>
+                            </tfoot>
+                        </table>
+                    </div>
+                    
+                    <div class="text-center mt-4">
+                        <a href="{{ url_for('home') }}" class="btn btn-primary">
+                            Continue Shopping
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

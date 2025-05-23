@@ -1,0 +1,73 @@
+:root {
+    --primary-color: #4478ac;
+    --secondary-color: #08352b;
+    --light-color: #f8f9fa;
+    --dark-color: #212529;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f8f9fa;
+}
+
+/* Navigation */
+.logo {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+/* Hero section */
+.hero-section {
+    background-image: url('/static/images/bookstore-hero.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 400px;
+    position: relative;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+}
+
+/* Book cards */
+.book-image {
+    height: 300px;
+    object-fit:fill;
+}
+
+.card {
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Cart icon */
+.bi-cart3 {
+    font-size: 1.25rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 576px) {
+  .hero-section {
+    min-height: 50vh;
+    height: auto;
+    padding: 2rem 1rem;
+  }
+}
+    
+.book-image {
+    height: 200px;
+}
+

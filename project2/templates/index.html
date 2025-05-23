@@ -1,0 +1,131 @@
+{% extends "base.html" %}
+
+{% block nav %}
+<header class="bg-primary text-white shadow-sm sticky-top">
+    <div class="container">
+        <nav class="navbar navbar-expand-lg navbar-dark">
+            <div class="container-fluid">
+                <a class="navbar-brand d-flex align-items-center" href="{{ url_for('home') }}">
+                    <img src="{{ url_for('static', filename='images/bookstore-logo.jpg') }}" 
+                         alt="Bookstore Logo" 
+                         class="logo me-2">
+                    <span class="fs-4">The World in Words</span>
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                
+                <div class="collapse navbar-collapse" id="navbarContent">
+                    <ul class="navbar-nav ms-auto">
+                        {% if current_user.is_authenticated %}
+                            <li class="nav-item">
+                                <span class="nav-link">Welcome, {{ current_user.first_name or current_user.username }}</span>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ url_for('logout') }}">Logout</a>
+                            </li>
+                        {% else %}
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ url_for('login') }}">Login</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ url_for('register') }}">Register</a>
+                            </li>
+                        {% endif %}
+                        <li class="nav-item">
+                            <a class="nav-link position-relative" href="{{ url_for('view_cart') }}">
+                                <i class="bi bi-cart3"></i>
+                                {% if cart_count > 0 %}
+                                    <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                                        {{ cart_count }}
+                                    </span>
+                                {% endif %}
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </div>
+</header>
+{% endblock %}
+
+{% block content %}
+<div class="hero-section mb-5">
+    <div class="hero-overlay">
+        <div class="container text-center text-white py-5">
+            <h1 class="display-5 fw-bold">Welcome to The World in Words</h1>
+            <p class="lead fs-3 fw-bold">A power house of knowledge!</p>
+            <a href="#books" class="btn btn-primary btn-lg">Check our collection</a>
+        </div>
+    </div>
+</div>
+
+<div class="container" id="books">
+    <h2 class="text-center mb-4 text-primary text-decoration-underline">Our Collection</h2>
+    
+    {% if books %}
+    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 row-cols-xl-4 g-4">
+        {% for book in books %}
+        <div class="col">
+            <div class="card h-100 shadow-sm">
+                <img src="{{ url_for('static', filename='images/books/' + book.image_path) }}" 
+                     class="card-img-top book-image" 
+                     alt="{{ book.title }}">
+                
+                <div class="card-body d-flex flex-column">
+                    <h5 class="card-title">{{ book.title }}</h5>
+                    <p class="card-text text-muted">by {{ book.author }}</p>  
+                    <div class="mt-auto">
+                        <div class="d-flex justify-content-between align-items-center mb-2">
+                            <span class="text-primary fw-bold">${{book.price}}</span>
+                            <small class="{{ 'text-success' if book.stock_quantity > 0 else 'text-danger' }}">
+                                {{ 'In Stock' if book.stock_quantity > 0 else 'Out of Stock' }}
+                            </small>
+                        </div>
+                        
+                        {% if book.stock_quantity > 0 %}
+                        <form method="POST" action="{{ url_for('add_to_cart') }}" class="d-grid">
+                            <input type="hidden" name="book_id" value="{{book.book_id }}">
+                            <button type="submit" class="btn btn-sm btn-outline-primary">
+                                Add to Cart
+                            </button>
+                        </form>
+                        {% else %}
+                        <button class="btn btn-sm btn-secondary w-100" disabled>
+                            Out of Stock
+                        </button>
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+    {% else %}
+    <div class="alert alert-info text-center">
+        <h4>No books available at this moment</h4>
+        <p>Please check back later for our collection</p>
+    </div>
+    {% endif %}
+</div>
+{% endblock %}
+
+{% block footer %}
+<footer class="bg-primary text-white py-4 mt-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <p class="mb-0">&copy; 2025 The World in Words Bookstore. All rights reserved.</p>
+            </div>
+            <div class="col-md-6 text-md-end">
+                <div class="social-links">
+                    <a href="https://www.facebook.com/" class="text-white me-3"><i class="bi bi-facebook"></i></a>
+                    <a href="https://www.twitter.com" class="text-white me-3"><i class="bi bi-twitter"></i></a>
+                    <a href="https://www.instagram.com" class="text-white me-3"><i class="bi bi-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+{% endblock %}
