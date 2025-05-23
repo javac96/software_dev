@@ -13,7 +13,7 @@ import uuid
 app = Flask(__name__)
 app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://postgres:Takia0928@localhost/bookstore'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
-app.config['SECRET_KEY'] = '7895'  # Change this in production
+app.config['SECRET_KEY'] = '7895' 
 
 db = SQLAlchemy(app)
 login_manager = LoginManager(app)
